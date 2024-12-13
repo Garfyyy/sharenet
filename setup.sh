@@ -15,7 +15,6 @@ fi
 install() {
     if [ -z "$1" ]; then 
         echo "${RED}Error: Token is required for installation${NC}"
-        echo "Usage: $0 install <your_token>"
         exit 1
     fi
     
@@ -60,7 +59,7 @@ supervisor=supervise-daemon
 name="traffmonetizer"
 description="Traffmonetizer Service"
 command="/root/traffmonetizer/Cli"
-command_args="start accept ${TOKEN}"
+command_args="start accept --token ${TOKEN}"
 directory="/root/traffmonetizer"
 supervise_daemon_args="--stdout /var/log/\${name}.log --stderr /var/log/\${name}.err"
 

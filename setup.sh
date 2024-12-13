@@ -24,6 +24,7 @@ install() {
 
     # 安装依赖
     echo "${GREEN}Installing dependencies...${NC}"
+    apk update
     apk add --no-cache libstdc++ libgcc icu-libs || {
         echo "${RED}Failed to install dependencies${NC}"
         exit 1

@@ -28,7 +28,7 @@ wget https://raw.githubusercontent.com/Garfyyy/sharenet/main/setup.sh && chmod +
 
 2. 创建临时容器：
    ```bash
-   docker pull packetstream/psclient:latest
+   docker create --name tm_temp packetstream/psclient:latest
    ```
 
 4. 导出容器文件：
